@@ -1,14 +1,5 @@
 --[[
     VioX Phantom Hub  •  v1.0
-    Ultra Violet Premium System
-    Smooth UI • Anti-Detect • Auto-Save
-    © 2025 VioX Development
-]]--
-
--- Fish It Script (Base Framework) with Purple UI, Tabs, and Auto-Save
--- This is only a clean UI + system framework. Features still need integration.
--- Safe placeholder structure (not an exploit). Replace placeholders with real functions.
-
 -- AUTO-SAVE CONFIG SYSTEM -----------------------------------------------------
 local HttpService = game:GetService("HttpService")
 local SaveFile = "fishit_config.json"
@@ -291,33 +282,3 @@ for _,gui in ipairs((game.CoreGui:FindFirstChild("Fish It HUB - Purple UI") or g
         pcall(function() ApplyGradient(gui) end)
     end
 end
-
----------------------------------------------------------------------
--- STARTUP LOGO ANIMATION: "VioX Phantom"
----------------------------------------------------------------------
-local LogoGui = Instance.new("ScreenGui", game.CoreGui)
-LogoGui.Name = "VioXPhantom_Intro"
-
-local Logo = Instance.new("TextLabel", LogoGui)
-Logo.Size = UDim2.new(1,0,1,0)
-Logo.BackgroundTransparency = 1
-Logo.Text = "VIOX PHANTOM HUB"
-Logo.TextColor3 = Color3.fromRGB(200,100,255)
-Logo.Font = Enum.Font.GothamBlack
-Logo.TextScaled = true
-Logo.TextTransparency = 1
-
-spawn(function()
-    for i = 1, 20 do
-        task.wait(0.03)
-        Logo.TextTransparency = Logo.TextTransparency - 0.05
-    end
-    task.wait(1)
-    for i = 1, 20 do
-        task.wait(0.03)
-        Logo.TextTransparency = Logo.TextTransparency + 0.05
-    end
-    LogoGui:Destroy()
-end)
-
--- END -------------------------------------------------------------------------
